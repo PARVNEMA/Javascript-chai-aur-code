@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur code</title>
+</head>
+<body>
+    <h1>Naman nema</h1>
+    <button id="start">STart</button>
+    <button id="stop">STOP</button>
+</body>
+<script>
+const saydate=function(str){
+    let date=new Date();
+    console.log(str,date.toLocaleTimeString());
+}
+
+let intervalid;
+
+document.getElementById('start').addEventListener('click',function(){ intervalid=setInterval(saydate,1000,"hi");})
+document.getElementById('stop').addEventListener('click',function(){clearInterval(intervalid)});
+
+
+clearInterval(intervalid)
+</script>
+</html>
